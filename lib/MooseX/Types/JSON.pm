@@ -9,7 +9,7 @@ MooseX::Types::JSON - JSON datatype for Moose
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -18,12 +18,13 @@ our $VERSION = '0.01';
  use Moose;
  use Moose::Util::TypeConstraints;
  use MooseX::Types::JSON qw( JSON );
-    
+
  has config  => ( is => 'rw', isa => JSON        );
  has options => ( is => 'rw', isa => relaxedJSON );
  
 String type constraints that match valid and relaxed JSON. For the meaning of
-'relaxed' see L<JSON::XS>.
+'relaxed' see L<JSON::XS>. All the heavy lifting in the background is also
+done by L<JSON::XS>.
 
 =over
 
@@ -33,7 +34,7 @@ A Str that is valid JSON.
 
 =item * relaxedJSON
 
-A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see L<JSON::XS>.
+A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see L<JSON::XS>. 
 
 =back
 =cut

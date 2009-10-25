@@ -1,4 +1,7 @@
 Revision history for MooseX::Types::JSON;
 
+0.02   2009-10-25
+       - Fix whitespace in pod
+
 0.01   2009-10-25
        - Initial release

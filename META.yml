@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                MooseX-Types-JSON
-version:             0.01
+version:             0.02
 abstract:            JSON datatype for Moose
 license:             perl
 author:              
