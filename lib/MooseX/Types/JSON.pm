@@ -26,6 +26,8 @@ String type constraints that match valid and relaxed JSON. For the meaning of
 'relaxed' see L<JSON::XS>. All the heavy lifting in the background is also
 done by L<JSON::XS>.
 
+Coercions from Defined types are included.
+
 =over
 
 =item * JSON
@@ -48,27 +50,41 @@ subtype JSON,
   where { ref( eval { JSON::XS->new->decode($_) } ) ne '' },
   message { "Must be valid JSON" };
 
+coerce JSON,
+  from 'Defined',
+    via { JSON::XS->new->allow_nonref->encode($_) };
+
 subtype relaxedJSON,
   as "Str",
   where { ref( eval { JSON::XS->new->relaxed->decode($_) } ) ne '' },
   message { "Must be at least relaxed JSON" };
 
+coerce relaxedJSON,
+  from 'Defined',
+    via { JSON::XS->new->allow_nonref->encode($_) };
+
+=head1 CONTRIBUTORS
+
+Steve Huff
+
 =head1 AUTHOR
 
-Michael Langner, C<< <mila at cpan.org> >>
+Michael Langner
+
+=head1 CONTRIBUTING 
+
+If you'd like to contribute, just fork my repository
+(L<http://github.com/cpan-mila/perl-moosex-types-json>)
+on Github, commit your changes and send me a pull request.
 
 =head1 BUGS
 
-Please report any bugs or feature requests to
-C<bug-moosex-types-json at rt.cpan.org>,
-or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=MooseX-Types-JSON>.
-I will be notified, and then you'll automatically be notified of progress on
-your bug as I make changes.
+Please report any bugs or feature requests at
+L<http://github.com/cpan-mila/perl-moosex-types-json/issues>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2009 Michael Langner, all rights reserved.
+Copyright 2011 Michael Langner, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it under the
 same terms as Perl itself.
