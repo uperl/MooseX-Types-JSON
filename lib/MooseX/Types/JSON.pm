@@ -1,4 +1,7 @@
 package MooseX::Types::JSON;
+{
+  $MooseX::Types::JSON::VERSION = '0.03';
+}
 
 use strict;
 use warnings;
@@ -6,10 +9,6 @@ use warnings;
 =head1 NAME
 
 MooseX::Types::JSON - JSON datatype for Moose
-
-=cut
-
-our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -84,7 +83,7 @@ L<http://github.com/cpan-mila/perl-moosex-types-json/issues>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2011 Michael Langner, all rights reserved.
+Copyright 2014 Michael Langner, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it under the
 same terms as Perl itself.
