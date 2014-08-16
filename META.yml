@@ -3,21 +3,21 @@ abstract: 'JSON datatype for Moose'
 author:
   - 'Michael Langner'
 build_requires:
-  Moose: 0
-  Test::More: 0
+  Moose: '0'
+  Test::More: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
+  ExtUtils::MakeMaker: '0'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.008, CPAN::Meta::Converter version 2.133380'
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: MooseX-Types-JSON
 requires:
-  JSON::XS: 0
-  Moose::Util::TypeConstraints: 0
-  MooseX::Types: 0
-  strict: 0
-  warnings: 0
-version: 0.03
+  JSON: '0'
+  Moose::Util::TypeConstraints: '0'
+  MooseX::Types: '0'
+  strict: '0'
+  warnings: '0'
+version: '0.04'

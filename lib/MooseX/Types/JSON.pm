@@ -1,8 +1,5 @@
 package MooseX::Types::JSON;
-{
-  $MooseX::Types::JSON::VERSION = '0.03';
-}
-
+$MooseX::Types::JSON::VERSION = '0.04';
 use strict;
 use warnings;
 
@@ -22,8 +19,8 @@ MooseX::Types::JSON - JSON datatype for Moose
  has options => ( is => 'rw', isa => relaxedJSON );
  
 String type constraints that match valid and relaxed JSON. For the meaning of
-'relaxed' see L<JSON::XS>. All the heavy lifting in the background is also
-done by L<JSON::XS>.
+'relaxed' see L<JSON>. All the heavy lifting in the background is also
+done by L<JSON>.
 
 Coercions from Defined types are included.
 
@@ -35,32 +32,32 @@ A Str that is valid JSON.
 
 =item * relaxedJSON
 
-A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see L<JSON::XS>. 
+A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see L<JSON>. 
 
 =back
 =cut
 
 use MooseX::Types -declare => [qw/ JSON relaxedJSON /];
 use Moose::Util::TypeConstraints;
-use JSON::XS;
+use JSON;
 
 subtype JSON,
   as "Str",
-  where { ref( eval { JSON::XS->new->decode($_) } ) ne '' },
+  where { ref( eval { ::JSON->new->decode($_) } ) ne '' },
   message { "Must be valid JSON" };
 
 coerce JSON,
   from 'Defined',
-    via { JSON::XS->new->allow_nonref->encode($_) };
+    via { ::JSON->new->allow_nonref->encode($_) };
 
 subtype relaxedJSON,
   as "Str",
-  where { ref( eval { JSON::XS->new->relaxed->decode($_) } ) ne '' },
+  where { ref( eval { ::JSON->new->relaxed->decode($_) } ) ne '' },
   message { "Must be at least relaxed JSON" };
 
 coerce relaxedJSON,
   from 'Defined',
-    via { JSON::XS->new->allow_nonref->encode($_) };
+    via { ::JSON->new->allow_nonref->encode($_) };
 
 =head1 CONTRIBUTORS
 

@@ -1,5 +1,8 @@
 Revision history for MooseX::Types::JSON;
 
+0.04   2014-08-16
+       - dropped dependency on JSON::XS
+
 0.03   2014-01-05
        - convert distribution to use Dist::Zilla
        - Add type coercions (patch from SHUFF)
