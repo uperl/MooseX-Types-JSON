@@ -1,5 +1,8 @@
 Revision history for MooseX::Types::JSON;
 
+0.05   2014-08-18
+       - work around namespace problems in older perls ( < 5.18.0 )
+
 0.04   2014-08-16
        - dropped dependency on JSON::XS
 

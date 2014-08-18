@@ -15,9 +15,9 @@ meta-spec:
   version: '1.4'
 name: MooseX-Types-JSON
 requires:
-  JSON: '0'
   Moose::Util::TypeConstraints: '0'
   MooseX::Types: '0'
+  base: '0'
   strict: '0'
   warnings: '0'
-version: '0.04'
+version: '0.05'
