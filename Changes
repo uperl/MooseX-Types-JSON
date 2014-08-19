@@ -1,5 +1,8 @@
 Revision history for MooseX::Types::JSON;
 
+0.06   2014-08-19
+       - add JSON Prereq as AutoPrereqs does not find it
+
 0.05   2014-08-18
        - work around namespace problems in older perls ( < 5.18.0 )
 

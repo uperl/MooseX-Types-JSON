@@ -4,7 +4,7 @@ package # hide from PAUSE
 use base JSON;
 
 package MooseX::Types::JSON;
-$MooseX::Types::JSON::VERSION = '0.05';
+$MooseX::Types::JSON::VERSION = '0.06';
 use strict;
 use warnings;
 

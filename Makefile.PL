@@ -20,6 +20,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "MooseX::Types::JSON",
   "PREREQ_PM" => {
+    "JSON" => 0,
     "Moose::Util::TypeConstraints" => 0,
     "MooseX::Types" => 0,
     "base" => 0,
@@ -30,7 +31,7 @@ my %WriteMakefileArgs = (
     "Moose" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.05",
+  "VERSION" => "0.06",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -38,6 +39,7 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "JSON" => 0,
   "Moose" => 0,
   "Moose::Util::TypeConstraints" => 0,
   "MooseX::Types" => 0,
