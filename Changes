@@ -1,5 +1,8 @@
 Revision history for MooseX::Types::JSON;
 
+1.00   2014-08-22
+       - bump version to 1.00
+
 0.06   2014-08-19
        - add JSON Prereq as AutoPrereqs does not find it
 
