@@ -1,8 +1,3 @@
-package # hide from PAUSE
-    JSON_DOT_PM;
-
-use base JSON;
-
 package MooseX::Types::JSON;
 $MooseX::Types::JSON::VERSION = '1.00';
 use strict;
@@ -44,24 +39,25 @@ A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see L<JSON>.
 
 use MooseX::Types -declare => [qw/ JSON relaxedJSON /];
 use Moose::Util::TypeConstraints;
+use JSON ();
 
 subtype JSON,
   as "Str",
-  where { ref( eval { JSON_DOT_PM->new->decode($_) } ) ne '' },
+  where { ref( eval { 'JSON'->new->decode($_) } ) ne '' },
   message { "Must be valid JSON" };
 
 coerce JSON,
   from 'Defined',
-    via { JSON_DOT_PM->new->allow_nonref->encode($_) };
+    via { 'JSON'->new->allow_nonref->encode($_) };
 
 subtype relaxedJSON,
   as "Str",
-  where { ref( eval { JSON_DOT_PM->new->relaxed->decode($_) } ) ne '' },
+  where { ref( eval { 'JSON'->new->relaxed->decode($_) } ) ne '' },
   message { "Must be at least relaxed JSON" };
 
 coerce relaxedJSON,
   from 'Defined',
-    via { JSON_DOT_PM->new->allow_nonref->encode($_) };
+    via { 'JSON'->new->allow_nonref->encode($_) };
 
 =head1 CONTRIBUTORS
 

@@ -16,7 +16,6 @@ my %WriteMakefileArgs = (
     "JSON" => 0,
     "Moose::Util::TypeConstraints" => 0,
     "MooseX::Types" => 0,
-    "base" => 0,
     "strict" => 0,
     "warnings" => 0
   },
@@ -36,7 +35,6 @@ my %FallbackPrereqs = (
   "Moose::Util::TypeConstraints" => 0,
   "MooseX::Types" => 0,
   "Test::More" => 0,
-  "base" => 0,
   "strict" => 0,
   "warnings" => 0
 );
