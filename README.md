@@ -1,6 +1,6 @@
-# NAME
+# MooseX::Types::JSON ![linux](https://github.com/uperl/MooseX-Types-JSON/workflows/linux/badge.svg)
 
-MooseX::Types::JSON - JSON datatype for Moose
+JSON datatype for Moose
 
 # SYNOPSIS
 
@@ -13,7 +13,6 @@ use MooseX::Types::JSON qw( JSON relaxedJSON );
 
 has config  => ( is => 'rw', isa => JSON        );
 has options => ( is => 'rw', isa => relaxedJSON );
-
 ```
 
 String type constraints that match valid and relaxed JSON. For the meaning of
@@ -30,28 +29,17 @@ Coercions from Defined types are included.
 
     A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see [JSON](https://metacpan.org/pod/JSON). 
 
-# CONTRIBUTORS
+# AUTHOR
+
+Author: Graham Ollis <plicease@cpan.org>
+
+Contributors:
 
 Steve Huff
 
-# AUTHOR
+# COPYRIGHT AND LICENSE
 
-Michael Langner
+This software is copyright (c) 2014,2022 by Michael Langner.
 
-# CONTRIBUTING 
-
-If you'd like to contribute, just fork my repository
-([http://github.com/cpan-mila/perl-moosex-types-json](http://github.com/cpan-mila/perl-moosex-types-json))
-on Github, commit your changes and send me a pull request.
-
-# BUGS
-
-Please report any bugs or feature requests at
-[http://github.com/cpan-mila/perl-moosex-types-json/issues](http://github.com/cpan-mila/perl-moosex-types-json/issues).
-
-# COPYRIGHT & LICENSE
-
-Copyright 2014 Michael Langner, all rights reserved.
-
-This program is free software; you can redistribute it and/or modify it under the
-same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
