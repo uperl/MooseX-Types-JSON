@@ -1,4 +1,4 @@
-# MooseX::Types::JSON ![linux](https://github.com/uperl/MooseX-Types-JSON/workflows/linux/badge.svg)
+# MooseX::Types::JSON ![static](https://github.com/uperl/MooseX-Types-JSON/workflows/static/badge.svg) ![linux](https://github.com/uperl/MooseX-Types-JSON/workflows/linux/badge.svg)
 
 JSON datatype for Moose
 
