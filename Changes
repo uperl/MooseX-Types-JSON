@@ -1,4 +1,6 @@
-Revision history for MooseX::Types::JSON;
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
 
 1.00   2014-08-22
        - bump version to 1.00
