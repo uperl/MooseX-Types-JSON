@@ -40,7 +40,7 @@ A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see L<JSON>.
 
 use MooseX::Types -declare => [qw/ JSON relaxedJSON /];
 use Moose::Util::TypeConstraints;
-use JSON ();
+use JSON ();  ## no critic (Community::PreferredAlternatives)
 
 subtype JSON,
   as "Str",
