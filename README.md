@@ -27,7 +27,7 @@ Coercions from Defined types are included.
 
 - relaxedJSON
 
-    A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see [JSON](https://metacpan.org/pod/JSON). 
+    A Str that is 'relaxed' JSON. For the meaning of 'relaxed' see [JSON](https://metacpan.org/pod/JSON).
 
 # AUTHOR
 

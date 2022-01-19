@@ -9,14 +9,7 @@ use 5.008003;
 
 =head1 SYNOPSIS
 
- package Foo;
- 
- use Moose;
- use Moose::Util::TypeConstraints;
- use MooseX::Types::JSON qw( JSON relaxedJSON );
- 
- has config  => ( is => 'rw', isa => JSON        );
- has options => ( is => 'rw', isa => relaxedJSON );
+# EXAMPLE: examples/synopsis.pl
 
 String type constraints that match valid and relaxed JSON. For the meaning of
 'relaxed' see L<JSON>. All the heavy lifting in the background is also
