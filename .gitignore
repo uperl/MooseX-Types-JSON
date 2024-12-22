@@ -1,3 +1,6 @@
 /MooseX-Types-JSON*
 /.build
 *.swp
+/MooseX-Types-JSON-*
+*.old
+*.orig
