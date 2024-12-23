@@ -2,7 +2,7 @@ package MooseX::Types::JSON;
 
 use strict;
 use warnings;
-use 5.008003;
+use 5.012;
 
 # ABSTRACT: JSON datatype for Moose
 # VERSION
